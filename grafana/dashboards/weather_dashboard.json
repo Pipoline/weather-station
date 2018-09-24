@@ -1,40 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.1.2"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": []
   },
@@ -42,7 +6,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "hideControls": false,
-  "id": null,
+  "id": 3,
   "links": [],
   "refresh": "1m",
   "rows": [
@@ -59,7 +23,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "decimals": 1,
           "format": "celsius",
           "gauge": {
@@ -112,7 +76,7 @@
               "legendFormat": "",
               "metric": "temperature",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "25,30",
@@ -144,7 +108,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "decimals": 1,
           "format": "celsius",
           "gauge": {
@@ -197,7 +161,7 @@
               "legendFormat": "",
               "metric": "temperature",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "25,30",
@@ -229,7 +193,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "decimals": 1,
           "format": "celsius",
           "gauge": {
@@ -282,7 +246,7 @@
               "legendFormat": "",
               "metric": "temperature",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "25,30",
@@ -314,7 +278,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "format": "percent",
           "gauge": {
             "maxValue": 100,
@@ -364,7 +328,7 @@
               "intervalFactor": 2,
               "metric": "humidity",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "30,45",
@@ -389,7 +353,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "format": "percent",
           "gauge": {
             "maxValue": 100,
@@ -439,7 +403,7 @@
               "intervalFactor": 2,
               "metric": "humidity",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "30,45",
@@ -464,7 +428,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "format": "percent",
           "gauge": {
             "maxValue": 100,
@@ -514,7 +478,7 @@
               "intervalFactor": 2,
               "metric": "humidity",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "30,45",
@@ -539,7 +503,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "format": "pressurehpa",
           "gauge": {
             "maxValue": 100,
@@ -589,7 +553,7 @@
               "intervalFactor": 2,
               "metric": "humidity",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "980,990",
@@ -614,7 +578,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "format": "lengthm",
           "gauge": {
             "maxValue": 100,
@@ -664,7 +628,7 @@
               "intervalFactor": 2,
               "metric": "humidity",
               "refId": "A",
-              "step": 1200
+              "step": 600
             }
           ],
           "thresholds": "30,45",
@@ -739,7 +703,7 @@
           },
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 1,
           "legend": {
@@ -821,7 +785,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 7,
           "legend": {
@@ -903,7 +867,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 10,
           "legend": {
@@ -997,7 +961,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 2,
           "legend": {
@@ -1071,7 +1035,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 8,
           "legend": {
@@ -1145,7 +1109,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 11,
           "legend": {
@@ -1231,7 +1195,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 3,
           "legend": {
@@ -1304,7 +1268,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 9,
           "legend": {
@@ -1377,7 +1341,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 12,
           "legend": {
@@ -1462,7 +1426,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 17,
           "legend": {
@@ -1577,7 +1541,7 @@
           },
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 21,
           "legend": {
@@ -1658,7 +1622,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 18,
           "legend": {
@@ -1743,7 +1707,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 22,
           "legend": {
@@ -1815,7 +1779,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 23,
           "legend": {
@@ -1887,7 +1851,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": null,
           "fill": 1,
           "id": 24,
           "legend": {
