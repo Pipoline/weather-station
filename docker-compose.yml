@@ -3,9 +3,16 @@ version: "3"
 services:
   prometheus:
     image: prom/prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+    - 9092:9090
+    command: "--storage.tsdb.retention=365d"
 
   pushgateway:
     image: prom/pushgateway
+    ports:
+    - 9091:9091
 
   weather-api:
     build: .
@@ -15,9 +22,18 @@ services:
   grafana:
     image: grafana/grafana
     ports:
-      - 3000:3000
+      - 3001:3000
     volumes:
       - ./grafana:/etc/grafana/provisioning
+      - grafana-storage:/var/lib/grafana
     environment:
-      - GF_SERVER_ROOT_URL=http://grafana.server.name
-      - GF_SECURITY_ADMIN_PASSWORD=secret
+      - GF_SERVER_ROOT_URL=http://dexter.pipoline.sk:3001
+      - GF_SECURITY_ADMIN_PASSWORD=Sup3rH3sl0
+      - GF_SMTP_ENABLED=true
+      - GF_SMTP_USER=gitlab@ssls.sk
+      - GF_SMTP_PASSWORD=asdh5Aj3a123s
+      - GF_SMTP_HOST=mail.pipoline.com:465
+      - GF_SMTP_FROM_ADDRESS=grafana@dexter.pipoline.sk
+
+volumes:
+  grafana-storage:
